@@ -84,7 +84,6 @@ header {
   @include for-size(tablet-landscape) {
     display: flex;
     flex-direction: column;
-    margin-left: 84px;
 
     font-weight: 500;
     font-size: 14px;
