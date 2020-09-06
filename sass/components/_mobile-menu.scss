@@ -37,10 +37,12 @@
     align-items: center;
   }
 
-  &.is-open {
-    display: block;
-    text-align: center;
-    padding: 60px;
-    z-index: 100;
+  @include for-size(max-tablet) {
+    &.is-open {
+      display: block;
+      text-align: center;
+      padding: 60px;
+      z-index: 100;
+    }
   }
 }

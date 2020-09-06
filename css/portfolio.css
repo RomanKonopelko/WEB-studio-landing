@@ -797,11 +797,13 @@ header {
   }
 }
 
-.menu-container.is-open {
-  display: block;
-  text-align: center;
-  padding: 60px;
-  z-index: 100;
+@media (max-width: 767px) {
+  .menu-container.is-open {
+    display: block;
+    text-align: center;
+    padding: 60px;
+    z-index: 100;
+  }
 }
 
 .footer {
