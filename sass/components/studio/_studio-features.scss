@@ -1,0 +1,100 @@
+.features-list {
+  list-style-type: none;
+  margin-bottom: 0px;
+  margin-top: 45px;
+  padding: 0px;
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 94px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  & > li > h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $main-text-color;
+  }
+
+  & > li > p {
+    margin: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $contact-label-color;
+  }
+}
+
+.features-item {
+  & > h3 {
+    @include for-size(max-desktop) {
+      text-align: center;
+    }
+  }
+  &:not(:last-child) {
+    @include for-size(max-tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:last-child {
+    @include for-size(max-tablet) {
+    }
+    margin-bottom: 60px;
+  }
+
+  @include for-size(tablet-landscape) {
+    width: 354px;
+    margin: 15px;
+  }
+
+  @include for-size(desktop) {
+    width: 270px;
+    margin: 0px;
+  }
+}
+
+.bg-icon::before {
+  content: '';
+  display: flex;
+  height: 120px;
+
+  background-color: $team-section-background;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-icon:nth-child(1)::before {
+  background-image: url(../icons/antenna.svg);
+}
+
+.bg-icon:nth-child(2)::before {
+  background-image: url(../icons/clock.svg);
+}
+
+.bg-icon:nth-child(3)::before {
+  background-image: url(../icons/diagram.svg);
+}
+
+.bg-icon:nth-child(4)::before {
+  background-image: url(../icons/astronaut.svg);
+}

@@ -1,0 +1,46 @@
+.btn-burger {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @include for-size(tablet-landscape) {
+    display: none;
+  }
+}
+
+.btn-burger .icon-cross {
+  display: none;
+}
+
+.btn-burger.is-open .icon-cross {
+  display: block;
+}
+
+.btn-burger.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  @include for-size(max-tablet) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    align-items: center;
+  }
+
+  &.is-open {
+    display: block;
+    text-align: center;
+    padding: 60px;
+    z-index: 100;
+  }
+}

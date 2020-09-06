@@ -1,0 +1,100 @@
+body {
+  font-family: 'roboto', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  padding-inline-start: 0px;
+}
+
+img {
+  display: block;
+}
+
+footer {
+  background: $footer-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// * {
+//   outline: 1px solid red;
+//   box-sizing: border-box;
+// }
+
+*:focus {
+  outline-color: $accent-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  @include for-size(tablet-portrait) {
+    width: 480px;
+  }
+  @include for-size(tablet-landscape) {
+    width: 768px;
+  }
+  @include for-size(desktop) {
+    width: 1200px;
+  }
+}
+
+.section-title {
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+
+  @include for-size(max-desktop) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.17;
+  }
+  @include for-size(desktop) {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.checkbox {
+  position: absolute !important;
+  clip: rect(0 0 0 0);
+  padding: 0 !important;
+  border: 0;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

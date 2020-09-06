@@ -1,0 +1,141 @@
+.footer {
+  display: flex;
+  text-align: center;
+}
+
+.flex-footer {
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include for-size(desktope) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.half-flex {
+  @include for-size(tablet-landscape) {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    width: calc(100% / 2);
+  }
+}
+
+.adress {
+  width: 100%;
+  @include for-size(tablet-landscape) {
+    width: calc(100%);
+  }
+
+  @include for-size(desktop) {
+    text-align: start;
+    width: calc(50%);
+    margin-top: 0;
+  }
+}
+.social-web {
+  width: 100%;
+  margin-top: 60px;
+
+  @include for-size(tablet-landscape) {
+    width: calc(100%);
+    margin-top: 0;
+  }
+
+  @include for-size(desktop) {
+    text-align: start;
+    width: calc(50%);
+    margin-top: 12px;
+  }
+}
+
+.adress-list:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer-contact-box {
+  list-style-type: none;
+}
+
+.google-map {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $white-text-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer-contact {
+  font-family: roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $footer-contact;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer-social-list {
+  display: inline-flex;
+  padding: 0px;
+}
+
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+}
+
+.footer-link-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-icon {
+  fill: $button-backround;
+}
+
+.footer-logo-link:hover,
+.footer-logo-link:focus {
+  background-color: $accent-color;
+}
+
+div.social-web > h2 {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-text-color;
+}
+
+div.social-web > ul {
+  list-style-type: none;
+  margin: 0;
+}

@@ -1,0 +1,135 @@
+.team {
+  background: $team-section-background;
+
+  @include for-size(max-desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+  list-style-type: none;
+  @include for-size(tablet-landscape) {
+  }
+}
+
+.team-item {
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    @include for-size(max-tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include for-size(tablet-landscape) {
+    margin: 15px;
+  }
+
+  @include for-size(desktop) {
+    margin: 0;
+  }
+
+  @include for-size(desktop) {
+    & + & {
+      margin-left: 30px;
+    }
+  }
+}
+.team-jpg {
+  display: block;
+  width: 270px;
+  height: 260px;
+}
+.contact-container > h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+}
+.contact-container p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $contact-label-color;
+}
+
+.team-list > li > ul {
+  list-style-type: none;
+}
+
+.icons-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icons-list-item {
+  margin-top: 16px;
+}
+
+.team-contact {
+  display: inline-flex;
+}
+
+.icons-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.social-icon {
+  fill: $icons;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $button-backround;
+  }
+  .icons-link:hover &,
+  .icons-link:focus & {
+    fill: $button-backround;
+  }
+}
+
+.contact-container {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  background-color: $white-text-color;
+  @include for-size(desktop) {
+    padding-bottom: 30px;
+  }
+}
+
+.contact-container > h3 {
+  margin: 0px;
+}
+
+.contact-container > p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
