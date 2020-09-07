@@ -6,8 +6,9 @@
     margin-right: auto;
   }
   @include for-size(desktop) {
-    width: 50%;
-    margin-top: 12px;
+    width: calc(50% - 15px);
+    margin-top: 0;
+    margin-right: 0;
   }
 }
 
@@ -29,7 +30,7 @@
 
 .mail-form {
   @include for-size(desktop) {
-    display: inline-flex;
+    display: flex;
   }
 }
 

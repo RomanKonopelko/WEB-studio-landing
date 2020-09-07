@@ -1,6 +1,7 @@
-.team {
+.team-box {
   background: $team-section-background;
-
+}
+.team {
   @include for-size(max-desktop) {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -18,8 +19,6 @@
   margin: 0px;
   justify-content: center;
   list-style-type: none;
-  @include for-size(tablet-landscape) {
-  }
 }
 
 .team-item {

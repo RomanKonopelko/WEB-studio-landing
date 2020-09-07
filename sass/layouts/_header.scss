@@ -5,6 +5,11 @@
 
   @include for-size(tablet-landscape) {
     display: flex;
+    margin-left: 81px;
+  }
+
+  @include for-size(desktop) {
+    margin-left: 85px;
   }
 }
 
@@ -22,7 +27,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   @include for-size(max-tablet) {
     height: 60px;
   }
@@ -40,8 +44,22 @@ header {
   background-color: #ececec;
 }
 
+.nav-item {
+  @include for-size(max-tablet) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include for-size(max-tablet) {
+    &:last-child {
+      margin-bottom: 52px;
+    }
+  }
+}
 .nav-item-link {
   position: relative;
+  padding: 8px 0px;
   display: inline-block;
   font-style: normal;
   font-size: 18px;
@@ -51,11 +69,6 @@ header {
 
   color: $main-text-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @include for-size(max-tablet) {
-    padding: 8px 0px;
-    margin-bottom: 40px;
-  }
 
   @include for-size(tablet-landscape) {
     padding: 32px 0px;
@@ -84,9 +97,10 @@ header {
   @include for-size(tablet-landscape) {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
 
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
     letter-spacing: 0.02em;
   }
@@ -94,6 +108,8 @@ header {
   @include for-size(desktop) {
     display: flex;
     flex-direction: row;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -102,9 +118,6 @@ header {
 
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 
   color: $contact-label-color;
 
@@ -120,7 +133,7 @@ header {
 
   @include for-size(tablet-landscape and max-desktop) {
     & + & {
-      margin-top: 10px;
+      margin-top: 16px;
     }
   }
   @include for-size(desktop) {

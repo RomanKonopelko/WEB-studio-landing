@@ -11,34 +11,21 @@
     display: flex;
     flex-wrap: wrap;
   }
-  @include for-size(desktope) {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-}
-
-.half-flex {
-  @include for-size(tablet-landscape) {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
   @include for-size(desktop) {
     display: flex;
-    width: calc(100% / 2);
+    align-items: baseline;
   }
 }
 
 .adress {
   width: 100%;
   @include for-size(tablet-landscape) {
-    width: calc(100%);
+    width: calc(50%);
   }
 
   @include for-size(desktop) {
     text-align: start;
-    width: calc(50%);
-    margin-top: 0;
+    width: calc((50% - 45px) / 2);
   }
 }
 .social-web {
@@ -46,14 +33,13 @@
   margin-top: 60px;
 
   @include for-size(tablet-landscape) {
-    width: calc(100%);
+    width: calc(50%);
     margin-top: 0;
   }
 
   @include for-size(desktop) {
     text-align: start;
-    width: calc(50%);
-    margin-top: 12px;
+    width: calc((50% - 45px) / 2);
   }
 }
 

@@ -1,6 +1,7 @@
 .clients {
   padding-top: 60px;
   padding-bottom: 60px;
+
   @include for-size(desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -28,7 +29,7 @@
   height: 90px;
   align-items: center;
   justify-content: center;
-  border: 1px solid $contact-label-color;
+  border: 1px solid $icons;
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
