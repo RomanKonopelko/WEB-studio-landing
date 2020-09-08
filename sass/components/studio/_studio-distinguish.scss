@@ -15,8 +15,11 @@
 }
 
 .distinguish {
-  display: none;
   padding-top: 94px;
+
+  @include for-size(max-desktop) {
+    display: none;
+  }
 }
 
 .distinguish-list {

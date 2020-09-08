@@ -389,6 +389,7 @@ html {
 
 img {
   display: block;
+  width: 100%;
 }
 
 footer {
@@ -1618,8 +1619,13 @@ div.social-web > ul {
 }
 
 .distinguish {
-  display: none;
   padding-top: 94px;
+}
+
+@media (max-width: 1199.9px) {
+  .distinguish {
+    display: none;
+  }
 }
 
 .distinguish-list {
@@ -1719,6 +1725,7 @@ div.social-web > ul {
 
 @media (min-width: 1200px) {
   .team-item {
+    width: calc((100% - 90px) / 4);
     margin-bottom: 0;
   }
   .team-item + .team-item {
