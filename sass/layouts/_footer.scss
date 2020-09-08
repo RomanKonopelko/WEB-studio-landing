@@ -39,6 +39,7 @@
 
   @include for-size(desktop) {
     text-align: start;
+    margin-left: auto;
     width: calc((50% - 45px) / 2);
   }
 }

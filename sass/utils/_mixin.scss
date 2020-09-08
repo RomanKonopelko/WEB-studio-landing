@@ -2,8 +2,8 @@
   $mobile: 480px;
   $tablet: 768px;
   $desktop: 1200px;
-  $max-tablet: 767px;
-  $max-desktop: 1199px;
+  $max-tablet: 767.9px;
+  $max-desktop: 1199.9px;
 
   @if $range == phone-only {
     @media (max-width: #{$mobile - 1}) {

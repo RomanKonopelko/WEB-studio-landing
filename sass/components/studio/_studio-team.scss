@@ -19,6 +19,10 @@
   margin: 0px;
   justify-content: center;
   list-style-type: none;
+
+  @include for-size(tablet-landscape) {
+    justify-content: space-between;
+  }
 }
 
 .team-item {
@@ -34,23 +38,25 @@
   }
 
   @include for-size(tablet-landscape) {
-    margin: 15px;
-  }
+    margin-bottom: 30px;
 
-  @include for-size(desktop) {
-    margin: 0;
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
   }
 
   @include for-size(desktop) {
     & + & {
       margin-left: 30px;
     }
+
+    margin-bottom: 0;
   }
 }
+
 .team-jpg {
   display: block;
-  width: 270px;
-  height: 260px;
+  width: 100%;
 }
 .contact-container > h3 {
   font-style: normal;
@@ -119,6 +125,7 @@
   padding-top: 30px;
   padding-bottom: 24px;
   background-color: $white-text-color;
+
   @include for-size(desktop) {
     padding-bottom: 30px;
   }
