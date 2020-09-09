@@ -9,7 +9,7 @@
 }
 .client-list-item {
   @include for-size(max-tablet) {
-    width: calc((100% - 45px) / 2);
+    width: calc((100% - 30px) / 2);
     margin-bottom: 30px;
 
     &:nth-last-child(-n + 2) {
