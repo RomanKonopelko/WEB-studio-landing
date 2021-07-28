@@ -1,2 +1,2 @@
-# goit-markup-hw-08
+# WEB studio responsive landing site
  
